@@ -1,0 +1,38 @@
+# openenv.yaml
+name: supply_chain
+version: "0.1.0"
+description: "A simple supply chain management RL environment where agents learn to optimize inventory ordering decisions"
+
+# Environment metadata
+author: "Your Name"
+tags:
+  - supply-chain
+  - inventory-management
+  - logistics
+  - operations-research
+
+# Configuration
+config:
+  warehouse_capacity: 200
+  max_order_size: 100
+  supplier_lead_time: 3
+  episode_length: 30
+
+# Action space
+action_space:
+  type: "discrete"
+  description: "Order quantity from supplier (0-100 units)"
+
+# Observation space
+observation_space:
+  type: "dict"
+  description: "Current state of the supply chain including inventory, demand, and time information"
+
+# Entry points
+server:
+  module: "server.app"
+  app: "app"
+
+client:
+  class: "SupplyChainEnv"
+  module: "client"
