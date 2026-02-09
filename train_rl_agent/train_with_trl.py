@@ -20,9 +20,9 @@ from typing import List, Dict
 import json
 
 
-# ==============================================================================
+
 # STEP 1: Create Environment Wrapper for TRL
-# ==============================================================================
+
 
 class SupplyChainTRLWrapper:
     """
@@ -131,9 +131,9 @@ Order Quantity: """
         self.env.close()
 
 
-# ==============================================================================
+
 # STEP 2: Create Dataset Generator
-# ==============================================================================
+
 
 def create_episodes(env_wrapper: SupplyChainTRLWrapper, num_episodes: int = 10) -> List[Dict]:
     """
@@ -181,9 +181,9 @@ def create_episodes(env_wrapper: SupplyChainTRLWrapper, num_episodes: int = 10) 
     return episodes
 
 
-# ==============================================================================
+
 # STEP 3: Training with TRL GRPO
-# ==============================================================================
+
 
 def train_with_grpo():
     """
@@ -267,9 +267,9 @@ def train_with_grpo():
     print("\n✅ Training complete!")
 
 
-# ==============================================================================
+
 # STEP 4: Simplified RL Training (Alternative Approach)
-# ==============================================================================
+
 
 def train_simple_rl():
     """
@@ -388,9 +388,9 @@ def train_simple_rl():
     print("\n✅ Training complete! Model saved to supply_chain_policy.pt")
 
 
-# ==============================================================================
+
 # STEP 5: Evaluation
-# ==============================================================================
+
 
 def evaluate_agent(policy_path: str = None):
     """Evaluate a trained agent."""
@@ -441,9 +441,9 @@ def evaluate_agent(policy_path: str = None):
     print(f"{'=' * 60}")
 
 
-# ==============================================================================
+
 # MAIN
-# ==============================================================================
+
 
 if __name__ == "__main__":
     import sys

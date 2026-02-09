@@ -23,9 +23,9 @@ from typing import List, Dict
 import re
 
 
-# ==============================================================================
+
 # PART 1: Environment Integration with TRL
-# ==============================================================================
+
 
 class SupplyChainRLEnvironment:
     """
@@ -143,9 +143,9 @@ Analysis and Decision:
         self.env.close()
 
 
-# ==============================================================================
+
 # PART 2: Generate Training Data
-# ==============================================================================
+
 
 def collect_demonstrations(num_episodes: int = 20) -> List[Dict]:
     """
@@ -234,9 +234,9 @@ def create_trl_dataset(experiences: List[Dict]) -> Dataset:
     return Dataset.from_dict(dataset_dict)
 
 
-# ==============================================================================
+
 # PART 3: Train with TRL
-# ==============================================================================
+
 
 def train_supply_chain_agent():
     """
@@ -319,9 +319,9 @@ def train_supply_chain_agent():
     print("See: https://huggingface.co/docs/trl/")
 
 
-# ==============================================================================
+
 # PART 4: Inference with Trained Agent
-# ==============================================================================
+
 
 def test_trained_agent(model_path: str = "gpt2"):
     """
@@ -392,9 +392,9 @@ def test_trained_agent(model_path: str = "gpt2"):
     print(f"{'=' * 80}")
 
 
-# ==============================================================================
+
 # MAIN
-# ==============================================================================
+
 
 if __name__ == "__main__":
     import sys
